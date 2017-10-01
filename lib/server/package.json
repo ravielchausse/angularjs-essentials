@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "sudo npm install -g nodemon",
+    "update": "sudo npm update -g nodemon",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raviel Chausse Silveira",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.18.1",
+    "consign": "^0.1.6",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "express-validator": "^4.1.1",
+    "moment": "^2.18.1",
+    "moment-precise-range-plugin": "^1.2.4"
+  }
+}

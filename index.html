@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="listaTelefonica">
+<head>
+	<meta charset="UTF-8">
+	<title>Lista Telefonica</title>
+	<link rel="icon" href="img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/ui.css">
+	<script src="lib/core/angular.js"></script>
+	<script src="lib/core/angular-route.js"></script>
+	<script src="lib/core/angular-messages.js"></script>
+	<script src="lib/core/i18n/angular-locale_pt-br.js"></script>
+	<script src="lib/serialGenerator/serialGenerator.js"></script>
+	<script src="lib/ui/ui.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controller/listaTelefonicaCtrl.js"></script>
+	<script src="js/controller/novoContatoCtrl.js"></script>
+	<script src="js/controller/detalhesContatoCtrl.js"></script>
+	<script src="js/services/contatosAPIService.js"></script>
+	<script src="js/services/operadorasAPIService.js"></script>
+	<script src="js/config/locationConfig.js"></script>
+	<script src="js/config/serialGeneratorConfig.js"></script>
+	<script src="js/config/routeConfig.js"></script>
+	<script src="js/value/configValue.js"></script>
+	<script src="js/filters/nameFilter.js"></script>
+	<script src="js/filters/ellipsisFilter.js"></script>
+	<script src="js/filters/upperFilter.js"></script>
+	<script src="js/directives/uiAlertDirective.js"></script>
+	<script src="js/directives/uiDateDirective.js"></script>
+	<script src="js/interceptors/errorInterceptor.js"></script>
+	<script src="js/interceptors/loadingInterceptor.js"></script>
+	<script src="js/interceptors/timestampInterceptor.js"></script>
+	<script src="js/config/interceptorConfig.js"></script>
+</head>
+<body>
+	<div class="jumbotron" ng-show="loading">
+		<h3>Carregando...</h3>
+	</div>
+	<div class="container" ng-hide="loading">
+		<div ng-view></div>
+		<div ng-include="view/footer.html"></div>
+	</div>
+</body>
+</html>
